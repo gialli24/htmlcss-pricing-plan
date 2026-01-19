@@ -35,3 +35,76 @@ button {
 .debug-mobile {
     width: 512px;
 }
+
+/* #endregion Debug Rules */
+
+/* Toggles */
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+
+    gap: 0.5rem;
+
+    color: var(--dis-secondary);
+}
+
+.toggle {
+    width: 2.5rem;
+
+    display: inline-block;
+    border-radius: 1rem;
+    border: 2px solid var(--dis-secondary);
+
+    cursor: pointer;
+}
+
+.toggle::after {
+    content: "";
+
+    width: 1.2rem;
+    height: 1.2rem;
+
+    display: block;
+
+    border-radius: 50%;
+    outline: 2px solid var(--dis-secondary);
+
+    background-color: var(--dis-white);
+}
+
+.toggle.active {
+    border: 2px solid var(--dis-black);
+
+    background-color: var(--dis-black);
+}
+
+.toggle.active::after {
+    translate: 100% 0;
+
+    outline: 2px solid var(--dis-black);
+}
+
+/* #endregion Toggles */
+
+/* #region Header */
+
+.app-header {
+    padding: 2.5rem;
+}
+
+.app-header>p {
+    color: var(--dis-secondary);
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+/* #endregion Header */
