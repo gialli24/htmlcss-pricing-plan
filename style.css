@@ -28,6 +28,11 @@ button {
     font-family: "Inter Tight", sans-serif;
 }
 
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 /* #region Debug Rules */
 .debug {
     border: 1px dashed red;
@@ -35,6 +40,10 @@ button {
 
 .debug-mobile {
     width: 512px;
+}
+
+.debug-tablet {
+    width: 768px;
 }
 
 /* #endregion Debug Rules */
@@ -114,10 +123,21 @@ main {
     padding: 3rem 2.5rem 3rem 2.5rem;
 }
 
-.plan-card {
-    padding: 3rem 2rem;
+.plans-container {
+    display: flex;
+    flex-wrap: wrap;
 
-    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.plan-card {
+    flex-basis: calc(100% / 3 - (2rem * 2) / 3);
+    flex-shrink: 0;
+    flex-grow: 1;
+
+    min-width: 300px;
+
+    padding: 3rem 2rem;
 
     border-radius: 1.5rem;
 
